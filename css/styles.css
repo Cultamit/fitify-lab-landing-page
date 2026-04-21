@@ -660,6 +660,56 @@ p {
   font-size: 1.1rem;
 }
 
+.transformations-gallery {
+  margin-bottom: 3rem;
+}
+
+.transformations-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.transformation-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--grey-800);
+  transition: transform 0.3s ease;
+}
+
+.transformation-card:hover {
+  transform: scale(1.02);
+}
+
+.transformation-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.transformations-more {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.transformation-extra {
+  display: none;
+}
+
+.transformations-track.show-all .transformation-extra {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .transformation-extra {
+    display: block;
+  }
+  .transformations-more {
+    display: none;
+  }
+}
+
 /* ================================
    12. TESTIMONIALS
    ================================ */
@@ -945,6 +995,10 @@ p {
   font-size: 0.95rem;
   color: var(--grey-600);
   line-height: 1.7;
+}
+
+.coach-info p:not(.coach-role) + p:not(.coach-role) {
+  margin-top: 0.75rem;
 }
 
 /* ================================

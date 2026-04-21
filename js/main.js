@@ -131,6 +131,19 @@
     });
   }
 
+  var showMoreTransBtn = document.getElementById('show-more-transformations');
+  var transformationsTrack = document.querySelector('.transformations-track');
+
+  if (showMoreTransBtn && transformationsTrack) {
+    showMoreTransBtn.addEventListener('click', function () {
+      transformationsTrack.classList.add('show-all');
+      transformationsTrack.querySelectorAll('.transformation-extra').forEach(function (el) {
+        el.classList.add('visible');
+      });
+      showMoreTransBtn.style.display = 'none';
+    });
+  }
+
   // ================================
   // 6. FORM VALIDATION & WHATSAPP REDIRECT
   // ================================
